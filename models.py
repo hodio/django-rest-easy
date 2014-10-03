@@ -5,7 +5,7 @@ Here we create an extensible model, the purpose of this model is to add permissi
 from django.db import models
 from django.contrib.auth.models import User,Group
 
-class Amadou(models.Model):
+class RestEasy(models.Model):
     
     # These fields are used by django-permission AuthorPermissionLogic, CollaboratorsPermissionLogic, and AudiencePermission
     owner         = models.ForeignKey(User, related_name="%(app_label)s_%(class)s_related_owners") # CRUD
@@ -16,4 +16,4 @@ class Amadou(models.Model):
         abstract = True # Define as abstract to allow extension
     
     def __init__(self, *args, **kwargs):
-        super(Amadou, self).__init__(*args, **kwargs) # Initialize models.Model
+        super(RestEasy, self).__init__(*args, **kwargs) # Initialize models.Model
