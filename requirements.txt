@@ -1,0 +1,4 @@
+djangorestframework
+django-filter
+markdown
+django-permission
